@@ -47,22 +47,30 @@ todoApp.memory = [];
 
 ///Add a todo to the array
 todoApp.addTodo = function (todo) {
+  let count =0;
   this.memory.push({
     todoText: todo,
     complete: false,
   });
-  todoApp.displayTodos()
+  ;
+  let task = document.createElement("div");
+    task.classList.add("task")
+    task.innerHTML= `${this.memory.length}. ${this.memory[this.memory.length -1].todoText} <br> completed:${this.memory[this.memory.length -1].completed ? "[x]" : "[ ]"}`
+
+    taskApp.appendChild(task)
+
   console.log(`Your todo: "${todo}" has been added to the memory`);
 };
 
 //Display all todos
-todoApp.displayTodos = function () {
-  this.memory.forEach((todo, index) => {
-    let task = document.createElement("div");
-    task.innerText= `${index + 1}. ${todo.todoText} completed:${todo.completed ? "[x]" : "[ ]"}`
-      taskApp.appendChild(task)
-  });
-};
+// todoApp.displayTodos = function () {
+//   this.memory.forEach((todo, index) => {
+//     let task = document.createElement("div");
+//     task.classList.add("task")
+//     task.innerText= `${index + 1}. ${todo.todoText} completed:${todo.completed ? "[x]" : "[ ]"}`  
+//       taskApp.appendChild(task)
+//   });
+// };
 
 //Toggle the complete button
 todoApp.toggleComplete = function (position) {

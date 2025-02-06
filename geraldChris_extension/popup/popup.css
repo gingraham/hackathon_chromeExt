@@ -108,7 +108,8 @@ body{
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-left: 1rem;
+  /* align-items: center; */
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -132,11 +133,31 @@ input{
   background-size: 200% 100%;
   transition: background-position 0.8s ease-out;
 }
+.task{
+  line-height: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:2rem 0;
+  padding-left: .8rem;
+  margin: .8rem 0;
+  width: 360px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border-radius: 25px;
+  color: black;
+  font-size: 1.2rem;
+}
 h2{
   color:#bfbfbf;
   font-size: 2.3rem;
   line-height: 1;
   padding: 1rem 0;
+}
+h3{
+  font-size: 1.8rem;
 }
  a{
   display: inline-block;

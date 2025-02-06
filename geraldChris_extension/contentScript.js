@@ -1,4 +1,4 @@
-chrome.storage.local.set({ name:"todoApp.memory" }).then(() => {
+chrome.storage.local.set({ name:"aName" }).then(() => {
     console.log("Value is set");
   });
   
